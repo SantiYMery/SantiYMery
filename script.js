@@ -34,58 +34,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
   checkButton.addEventListener('click', () => {
       // Obtener valores seleccionados
-  const asistenciaSeleccionada = Array.from(asistenciaBtns).find(btn => btn.style.backgroundColor === 'rgb(143, 143, 143)')?.innerText || '';
-  const dietaSeleccionada = Array.from(dietaBtns).find(btn => btn.style.backgroundColor === 'rgb(143, 143, 143)')?.innerText || '';
-  const nombre = nombreInput.value;
+    const asistenciaSeleccionada = Array.from(asistenciaBtns).find(btn => btn.style.backgroundColor === 'rgb(143, 143, 143)')?.innerText || '';
+    const dietaSeleccionada = Array.from(dietaBtns).find(btn => btn.style.backgroundColor === 'rgb(143, 143, 143)')?.innerText || '';
+    const nombre = nombreInput.value;
 
+
+    
+
+    console.log("recargaron las cosaS?")
+    
   // Enviar a Google Sheets
-  fetch('https://script.google.com/macros/s/AKfycbxWwFG-KJ3TNB9YdnI9hQbwctEKy5hiUCnNK7ybTlerkeTyexRkSV6aUtR1iFlln_uEuw/exec', {
-      method: 'POST',
-      body: JSON.stringify({
-          nombre: nombre,
-          asistencia: asistenciaSeleccionada,
-          dieta: dietaSeleccionada
-      }),
-      headers: {
-          'Content-Type': 'application/json'
-      }
-  })
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(err => console.error('Error:', err));
-  
-  // Limpiar formulario
-  asistenciaBtns.forEach(btn => btn.style.backgroundColor = '#f6f6f9');
-  dietaBtns.forEach(btn => btn.style.backgroundColor = '#f6f6f9');
-  nombreInput.value = '';
-  });
+    fetch('https://script.google.com/macros/s/AKfycbxWwFG-KJ3TNB9YdnI9hQbwctEKy5hiUCnNK7ybTlerkeTyexRkSV6aUtR1iFlln_uEuw/exec', {
+        method: 'POST',
+        body: JSON.stringify({
+            nombre: nombre,
+            asistencia: asistenciaSeleccionada,
+            dieta: dietaSeleccionada
+        }),
+        headers: {
+            'Content-Type': 'text/plain;charset=utf-8'
+        }
+    })
+    .then(response => {
+      console.log(response.json())
+    })
+    .then(data => console.log(data))
+    .catch(err => console.error('Error:', err));
+    
+    // Limpiar formulario
+    asistenciaBtns.forEach(btn => btn.style.backgroundColor = '#f6f6f9');
+    dietaBtns.forEach(btn => btn.style.backgroundColor = '#f6f6f9');
+    nombreInput.value = '';
+    });
 });
 
 
-checkButton.addEventListener('click', () => {
-  // Obtener valores seleccionados
-  const asistenciaSeleccionada = Array.from(asistenciaBtns).find(btn => btn.style.backgroundColor === 'rgb(143, 143, 143)')?.innerText || '';
-  const dietaSeleccionada = Array.from(dietaBtns).find(btn => btn.style.backgroundColor === 'rgb(143, 143, 143)')?.innerText || '';
-  const nombre = nombreInput.value;
-
-  // Enviar a Google Sheets
-  fetch('https://script.google.com/macros/s/AKfycbxWwFG-KJ3TNB9YdnI9hQbwctEKy5hiUCnNK7ybTlerkeTyexRkSV6aUtR1iFlln_uEuw/exec', {
-      method: 'POST',
-      body: JSON.stringify({
-          nombre: nombre,
-          asistencia: asistenciaSeleccionada,
-          dieta: dietaSeleccionada
-      }),
-      headers: {
-          'Content-Type': 'application/json'
-      }
-  })
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(err => console.error('Error:', err));
-  
-  // Limpiar formulario
-  asistenciaBtns.forEach(btn => btn.style.backgroundColor = '#f6f6f9');
-  dietaBtns.forEach(btn => btn.style.backgroundColor = '#f6f6f9');
-  nombreInput.value = '';
-});
