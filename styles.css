@@ -1,0 +1,249 @@
+@font-face {
+    font-family: 'Adelia'; /* Nombre que le das a la fuente */
+    src: url('fonts/Aston\ Script.ttf') format('opentype'); /* Ruta del archivo */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Centra el contenedor */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+}
+
+/* CARD */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px; /* Antes 25px, le sumamos 10px */
+    width: 35rem; 
+    border-radius: 20px;
+    height: auto;
+    gap: 25px; /* Antes 15px */
+}
+
+.cabeceraPaginaPrincipal {
+    background-color: #FFF9E7; /* Color de fondo */
+    width: 100%; /* Ocupa todo el ancho */
+    text-align: center;
+    padding: 35px 0; /* Antes 25px, le sumamos 10px */
+    border-bottom-left-radius: 50px; /* Ajusta el valor según necesites */
+    border-bottom-right-radius: 50px;
+}
+
+.cabeceraPaginas{
+    background-color: #24492E; /* Color de fondo */
+    width: 100%; /* Ocupa todo el ancho */
+    text-align: center;
+    padding: 35px 0; /* Antes 25px, le sumamos 10px */
+    border-bottom-left-radius: 50px; /* Ajusta el valor según necesites */
+    border-bottom-right-radius: 50px;
+}
+
+.texto-encabezado {
+    font-family: 'Adelia', sans-serif;
+    font-size: 45px; /* Antes 29px, +10 */
+}
+
+.texto-encabezado2 {
+    font-family: 'Adelia', sans-serif;
+    font-size: 45px; /* Antes 29px, +10 */
+    color:#FFFF
+}
+.mapa{
+    margin: 0 auto;
+    background-color: gray;
+    border-radius: 5px;
+    width: fit-content;
+}
+.back-arrow {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Renglón y contenedores */
+.renglon {
+    margin-top: 40px; /* Antes 30px, +10 */
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente */
+    gap: 25px; /* Antes 15px */
+}
+
+.contenedor {
+    width: 115px;  /* Antes 105px, +10 */
+    height: 40px; /* Antes 30px, +10 */
+    background-color: #24492E;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Centra horizontalmente */
+}
+
+/* Cápsula del número */
+.capsula {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px; /* Antes 50px, +10 */
+    height: 70px; /* Antes 60px, +10 */
+    border: 4px solid #24492E; /* Antes 3px, +1px para que se vea más grueso */
+    border-radius: 35px; /* Antes 25px, para mantener proporción */
+    font-size: 30px; /* Antes 20px, +10 */
+    font-weight: bold;
+    color: #24492E;
+}
+
+.subrayado {
+    margin-right: 3px; /* Podrías subirlo a 8px o 10px si quieres más espacio */
+    margin-bottom: 3px;
+    width: 111%;  /* Podrías ajustar si lo ves necesario */
+    height: 38px; /* Antes 28px, +10 */
+    background-color: white;
+    position: absolute;
+    top: 0px; /* Ajustado la posición vertical */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px; /* Antes 15px, +10 */
+    font-weight: bold;
+    color: #24492E;
+}
+
+/* Card-body y botones */
+.card-body {
+    width: 360px; /* Antes 350px, +10 */
+    margin: 0 auto;
+}
+
+button {
+    
+    background-color: #24492E;
+    margin-top: 25px; /* Antes 15px, +10 */
+    font-size: 25px; /* Antes 15px, +10 */
+}
+
+
+
+.agregarMusica{
+    display: none;
+}
+
+
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.song-list, .playlist {
+    list-style-type: none;
+    padding: 0;
+    max-height: 200px;  /* Ajusta la altura máxima según el tamaño de los elementos */
+    overflow-y: auto; 
+}
+
+.song-list li, .playlist li {
+    background: #e9e9e9;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.btn {
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #1aa34a;
+}
+
+
+.botonAsistencia {
+    background-color: #f6f6f9; /* Gris */
+    color: #24492E;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 95%;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.botonAsistencia:hover {
+    background-color: #8f8f8f;
+}
+
+
+
+
+.check-button {
+    width: 105px;
+    height: 47px;
+    border: 2px solid #4CAF50; /* borde verde fino */
+    border-radius: 40px;
+    background-color: white;
+    
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.check-button:hover {
+    background-color: #4CAF50;
+    color: white;
+    width: 10%;
+}
+
+.check-button i {
+    font-size: 20px;
+    color: #4CAF50;
+    transition: color 0.2s;
+}
+
+.check-button:hover i {
+    color: white;
+}
+
+
+.aviso{
+    margin-top: 8px;
+    color: #24492E;
+    font-size: 14px;
+}
+
+.btnTarjeta{
+    background-color: #24492E;
+    width: 100%;
+    color: white;
+    border-radius: 30px;
+    height: 70px;
+}
