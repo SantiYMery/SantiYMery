@@ -247,3 +247,56 @@ input[type="text"] {
     border-radius: 30px;
     height: 70px;
 }
+
+
+.card-precio{
+    border-radius: 15px;
+    width: 344px;
+    height: 112px;
+    background-color: #F6F6F9;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px #00000040;
+    justify-content: center;
+    align-items: center;    /* centra horizontalmente */
+    justify-content: center; /* centra verticalmente */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-precio h2{
+    font-size: 24px;
+    font-weight: 700;
+    color:#24492E;
+
+}
+
+.card-precio h3{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500 ;
+    color:#24492E;
+
+}
+
+.dataBancaria{
+    text-align: left;
+    margin-top: 30px;
+    flex-direction: column;
+    gap: 4px; /* más pequeño que antes */
+    margin-bottom: 30px;
+}
+
+
+.dataBancaria h3{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.dataBancaria h4{
+    font-size: 14px;
+    color: #24492E;
+    font-weight: 400;
+    margin-top: 0;  /* elimina el margen superior */
+    margin-bottom: -1px; /* o el espacio que quieras hacia abajo */
+
+}

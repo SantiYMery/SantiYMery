@@ -69,3 +69,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+function copiarAlias() {
+    navigator.clipboard.writeText("santi.mery").then(() => {
+        alert('Alias copiado al portapapeles');
+    }).catch(err => {
+        alert('Error al copiar: ' + err);
+    });
+}
+
+function copiarAliasRegalo() {
+    navigator.clipboard.writeText("santiagourrets.uala").then(() => {
+        alert('Alias para el regalo copiado al portapapeles');
+    }).catch(err => {
+        alert('Error al copiar: ' + err);
+    });
+}
