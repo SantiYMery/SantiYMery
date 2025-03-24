@@ -26,7 +26,7 @@ const getTokenFromUrl = () => {
 
 let token = getTokenFromUrl();
 if (!token) {
-    alert("No hay token");
+
     document.getElementById("agregarMusica").style.display = "none";  // Ocultar el div si no hay token
 } else {
     document.getElementById("agregarMusica").style.display = "block"; // Mostrar el div si hay token
