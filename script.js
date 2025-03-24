@@ -6,7 +6,7 @@
  //URL
 //https://script.google.com/macros/s/AKfycby97pwK-smY8-G8lVBRBmmlXYe6CAvcv2lXUiaz-o0tcBZkGJ947LA7QoW-rjN7sufN4w/exec
  
-
+document.documentElement.setAttribute('data-theme', 'light');
 
 document.addEventListener("DOMContentLoaded", () => {
   const asistenciaBtns = document.querySelectorAll('.asistencia-btn');
