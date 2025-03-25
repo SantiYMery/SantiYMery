@@ -1,5 +1,5 @@
 const clientId = '41d810fd5af44e8a94f240f8b0372daa'; // Tu Client ID de Spotify
-const redirectUri = 'https://santiymery.github.io/SantiYMery/direcciones/musica.html'; // Tu Redirect URI
+const redirectUri = 'https://santiymery.github.io/SantiYMery/direcciones/extras.html    '; // Tu Redirect URI
 const scopes = [
     'user-library-read', 
     'playlist-modify-public', 
