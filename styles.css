@@ -148,7 +148,7 @@ button {
 
 .agregarMusica{
     display: none;
-    margin-top: 25px; /* Antes 15px, +10 */
+    margin-top: 25px;  /* Antes 15px, +10 */
     font-size: 25px; /* Antes 15px, +10 */
     color: #24492E;
 }
@@ -383,3 +383,28 @@ body, html {
     border-radius: 30px;
     height: 70px;
 }
+
+
+
+
+.overlay {
+    position: fixed; /* Se mantiene fija en toda la página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Cambia el color y el nivel de transparencia aquí */
+    z-index: 0;
+  }
+  .contenido {
+    position: relative;
+    z-index: 1; /* Esto asegura que el contenido quede encima de la capa transparente */
+    color: white;
+  }
+
+  .pregunta {  padding: 15px; margin-bottom: 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+  .pregunta.mostrar { opacity: 1; transform: translateY(0); }
+  .opciones button { display: block; width: 100%; margin: 5px 0; padding: 10px; border: none; border-radius: 8px; background-color: rgba(255, 255, 255, 0.7); cursor: pointer; transition: background-color 0.3s; }
+  .opciones button:hover { background-color: rgba(01, 0, 0, 0.3); }
+  #siguiente, #terminar { padding: 10px 20px; border: none; border-radius: 8px; background-color: #4CAF50; color: white; cursor: pointer; margin-top: 20px; }
+  #terminar { background-color: #e74c3c; }
