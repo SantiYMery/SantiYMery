@@ -148,7 +148,6 @@ button {
 
 .agregarMusica{
     display: none;
-    background-color: #24492E;
     margin-top: 25px; /* Antes 15px, +10 */
     font-size: 25px; /* Antes 15px, +10 */
     color: white;
@@ -167,7 +166,7 @@ input[type="text"] {
 .song-list, .playlist {
     list-style-type: none;
     padding: 0;
-    max-height: 200px;  /* Ajusta la altura máxima según el tamaño de los elementos */
+    max-height: 170px;  /* Ajusta la altura máxima según el tamaño de los elementos */
     overflow-y: auto; 
 }
 
