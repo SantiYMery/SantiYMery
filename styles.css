@@ -148,6 +148,10 @@ button {
 
 .agregarMusica{
     display: none;
+    background-color: #24492E;
+    margin-top: 25px; /* Antes 15px, +10 */
+    font-size: 25px; /* Antes 15px, +10 */
+    color: white;
 }
 
 
@@ -179,7 +183,7 @@ input[type="text"] {
 }
 
 .btn {
-    background-color: #1DB954;
+    background-color: #24492E;
     color: white;
     border: none;
     padding: 5px 10px;
