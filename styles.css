@@ -258,7 +258,7 @@ input[type="text"] {
 }
 
 .btnRegalo{
-    background-color: white;
+    background-color: rgb(202, 215, 196);
     width: 100%;
     color: #24492E;
     border-radius: 30px;
@@ -408,3 +408,35 @@ body, html {
   .opciones button:hover { background-color: rgba(01, 0, 0, 0.3); }
   #siguiente, #terminar { padding: 10px 20px; border: none; border-radius: 8px; background-color: #4CAF50; color: white; cursor: pointer; margin-top: 20px; }
   #terminar { background-color: #e74c3c; }
+
+
+
+
+  .consignas{
+
+
+  }
+
+
+  .consignas h3{
+    margin-top: 35px;
+    color: #24492E;
+    font-size: 20px;
+  }
+
+  .consignas button{
+    background-color: #24492E; margin-top: 15px; font-size: 25px;
+
+  }
+
+  .consignas textarea{
+
+    background-color: #F6F6F9; /* Fondo gris claro */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border: 1px solid #ccc; /* Borde gris */
+    font-size: 16px; /* Tamaño de fuente */
+    width: 80%; /* Ocupa todo el ancho disponible */
+    resize: vertical; /* Permite redimensionar solo verticalmente */
+  }

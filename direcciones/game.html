@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fondo repetido</title>
+  <title>Game Time</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Adelia&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css" />
@@ -31,12 +31,19 @@
     
         <div class="container d-flex" style="height: 100vh">
             <div class="p-3 text-center justify-content-center" style="width: 35rem; border-radius: 20px;">
+              <div class="renglon" id="espacioDeParticipante">
+                <h4 style="text-align: left; margin-left: 11px; margin-top: 5px;">Participante</h4>
+                <input type="text" id="participante" placeholder="nombre participante" />
+              </div>
+              
               <div id="contenedor"></div>
               <button id="siguiente">Siguiente</button>
-              <button id="terminar" style="display:none;">Terminar</button>
-          
-            
+              <button id="terminar" style="display:none;" onclick="window.location.href='anecdotario.html'">Terminar</button>
+              
+
+              <button class="btnRegalo" style="width: 80%;" id="anecdotario" onclick="window.location.href='anecdotario.html'">Anecdotario</button>
             </div>
+            
         </div>
     </div>
   <script src="encuesta.js"></script>

@@ -72,16 +72,32 @@ function seleccionarOpcion(boton, respuestaCorrecta, preguntaTexto) {
 }
 
 document.getElementById("siguiente").addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     indice += 4;
+    document.getElementById("espacioDeParticipante").style.display = "none";
+    document.getElementById("anecdotario").style.display="none";
     mostrarPreguntas();
 });
 
 document.getElementById("terminar").addEventListener("click", () => {
-    console.log("Respuestas seleccionadas:");
-    respuestas.forEach(respuesta => {
-        console.log(`Pregunta: ${respuesta.pregunta} - Respuesta seleccionada: ${respuesta.respuesta}`);
-    });
-    alert("¡Gracias por completar las preguntas!");
+    console.log(respuestas)
+    let participante = document.getElementById("participante").value;
+
+
+    let data = { participante, respuestas };
+
+    // Llamada a Google Apps Script
+    fetch("https://script.google.com/macros/s/AKfycbxpRHFSvQF_vV84rBIbyj0k6KDmDRBn7fXX-N1VzeEGOYOPQST9JgwrvHeOtu7FddgHMg/exec", {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(data => console.log("Datos enviados correctamente:", data))
+    .catch(error => console.error("Error:", error));
+
+
+
 });
 
 mostrarPreguntas();
