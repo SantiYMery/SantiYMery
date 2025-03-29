@@ -1,15 +1,9 @@
 @font-face {
-    font-family: 'Adelia'; /* Nombre que le das a la fuente */
-    src: url('fonts/Aston\ Script.ttf') format('opentype'); /* Ruta del archivo */
+    font-family: 'Adelia';
+    src: url('fonts/Aston\ Script.ttf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
-
-[data-theme="light"] {
-    background-color: #ffffff;
-    color: #000000;
-}
-
 
 body, html {
     margin: 0;
@@ -17,6 +11,7 @@ body, html {
     height: 100%;
     width: 100%;
 }
+
 
 .container {
     display: flex;
@@ -440,3 +435,67 @@ body, html {
     width: 80%; /* Ocupa todo el ancho disponible */
     resize: vertical; /* Permite redimensionar solo verticalmente */
   }
+
+
+
+
+
+
+
+
+
+
+  .loader {
+    position: relative;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .loader-image {
+    position: absolute;
+    width: 35rem;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0;
+    animation: fadeIn 20s ease-in-out forwards;
+  }
+  
+  .loader-image:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .loader-image:nth-child(2) {
+    animation-delay: 3s;
+  }
+  
+  .loader-image:nth-child(3) {
+    animation-delay: 6s;
+  }
+  
+  .loader-image:nth-child(4) {
+    animation-delay: 9s;
+  }
+  
+  .loader-image:nth-child(5) {
+    animation-delay: 12s;
+  }
+  
+  .loader-image:nth-child(6) {
+    animation-delay: 15s;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    20% {  /* Al llegar al 50% de la animación (1 segundo), alcanza 100% de opacidad */
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;  /* Mantiene la opacidad al 100% */
+    }
+    100% {
+        opacity: 0;  /* Mantiene la opacidad al 100% */
+      }
+  }
+  

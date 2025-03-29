@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  display: flex;
+
+
+  background-color: #f0f0f0;
+}
+
+.loader {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.loader-image {
+  position: absolute;
+  width: 35rem;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0;
+  animation: fadeIn 20s ease-in-out forwards;
+}
+
+.loader-image:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loader-image:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.loader-image:nth-child(3) {
+  animation-delay: 6s;
+}
+
+.loader-image:nth-child(4) {
+  animation-delay: 9s;
+}
+
+.loader-image:nth-child(5) {
+  animation-delay: 12s;
+}
+
+.loader-image:nth-child(6) {
+  animation-delay: 15s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  20% {  /* Al llegar al 50% de la animación (1 segundo), alcanza 100% de opacidad */
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;  /* Mantiene la opacidad al 100% */
+  }
+  100% {
+    opacity: 0;  /* Mantiene la opacidad al 100% */
+  }
+}
+
+
+.container {
+  display: flex;
+  justify-content: center; /* Centra el contenedor */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+}

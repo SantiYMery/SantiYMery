@@ -84,3 +84,13 @@ function copiarAliasRegalo() {
         alert('Error al copiar: ' + err);
     });
 }
+
+
+
+
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        document.querySelector('.slider-container').style.display = 'none';
+        document.querySelector('.page-content').style.display = 'block';
+    }, 6000); // 6 segundos (el tiempo de la animación)
+});
