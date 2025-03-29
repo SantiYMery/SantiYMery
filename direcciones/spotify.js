@@ -121,7 +121,7 @@ async function addToPlaylist(songUri) {
 }
 
 // 👉 Actualizar visualmente la playlist
-async function updatePlaylist() {
+function updatePlaylist() {
     var iframe = document.getElementById('miMusica');
     iframe.src = iframe.src;
     iframe.contentWindow.location.reload();

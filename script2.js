@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+
     const loader = document.querySelector(".loader");
   
     // Al finalizar la animación, eliminar el loader

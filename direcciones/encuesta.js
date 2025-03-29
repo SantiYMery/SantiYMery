@@ -16,7 +16,6 @@ const preguntas = [
     { texto: "¿Qué día se conocieron Santi y Mery?", opciones: ["26 de agosto", "10 de septiembre", "21 de septiembre", "15 de julio"], correcta: "21 de septiembre" }
 ];
 
-
 let respuestas = [];
 let indice = 0;
 
@@ -73,6 +72,19 @@ function seleccionarOpcion(boton, respuestaCorrecta, preguntaTexto) {
 
 document.getElementById("siguiente").addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    
+    // Verificar si todas las preguntas del bloque actual tienen respuestas
+    const respuestasSeleccionadas = respuestas.filter(res => res.pregunta === preguntas[indice].texto);
+    if (respuestasSeleccionadas.length === 0) {
+        alert("Por favor, responde todas las preguntas antes de continuar.");
+        return;
+    }
+    
+    if (!document.getElementById("participante").value) {
+        alert("Por favor, ingresa tu nombre.");
+        return;
+    }
+
     indice += 4;
     document.getElementById("espacioDeParticipante").style.display = "none";
     document.getElementById("anecdotario").style.display="none";
@@ -80,9 +92,12 @@ document.getElementById("siguiente").addEventListener("click", () => {
 });
 
 document.getElementById("terminar").addEventListener("click", () => {
-    console.log(respuestas)
-    let participante = document.getElementById("participante").value;
+    const participante = document.getElementById("participante").value;
 
+    if (!participante) {
+        alert("Por favor, ingresa tu nombre.");
+        return;
+    }
 
     let data = { participante, respuestas };
 
@@ -95,10 +110,6 @@ document.getElementById("terminar").addEventListener("click", () => {
     .then(response => response.json())
     .then(data => window.location.href = "anecdotario.html")
     .catch(error => console.error("Error:", error));
-
-    
-
-
 });
 
 mostrarPreguntas();

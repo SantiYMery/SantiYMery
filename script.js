@@ -39,9 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const nombre = nombreInput.value;
 
 
+    // Validar que todos los campos tengan datos
+    if (!nombre || !asistenciaSeleccionada || !dietaSeleccionada) {
+        window.alert("Por favor, complete todos los campos.");
+        return;  // Detener la ejecución si hay algún campo vacío
+    }
     
-
-    console.log("recargaron las cosaS?")
     
   // Enviar a Google Sheets
     fetch('https://script.google.com/macros/s/AKfycbxWwFG-KJ3TNB9YdnI9hQbwctEKy5hiUCnNK7ybTlerkeTyexRkSV6aUtR1iFlln_uEuw/exec', {
@@ -58,9 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(response => {
       console.log(response.json())
     })
-    .then(data => console.log(data))
-    .catch(err => console.error('Error:', err));
-    
+    .then( window.alert("Inscripcion Confirmada! Consulte los datos de la Tarjeta"))
+    .catch(err => console.error('Error:', err.error));
+   
     // Limpiar formulario
     asistenciaBtns.forEach(btn => btn.style.backgroundColor = '#f6f6f9');
     dietaBtns.forEach(btn => btn.style.backgroundColor = '#f6f6f9');
