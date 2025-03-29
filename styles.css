@@ -12,6 +12,30 @@ body, html {
     width: 100%;
 }
 
+h2{
+    font-size: 24px;
+    font-weight: 700;
+    color:#24492E;
+    line-height: 100%;
+    margin-top: 90px;
+}
+
+h3{
+    font-size: 20px;
+    line-height: 100%;
+    font-weight: 500;
+    color: #24492E;
+    margin-top: 23px;
+}
+
+h4{
+    font-size: 15px;
+    line-height: 100%;
+    font-weight: 350;
+    color: #000000;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
 
 .container {
     display: flex;
