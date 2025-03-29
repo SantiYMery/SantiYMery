@@ -93,9 +93,10 @@ document.getElementById("terminar").addEventListener("click", () => {
         body: JSON.stringify(data),
     })
     .then(response => response.json())
-    .then(data => console.log("Datos enviados correctamente:", data))
+    .then(data => window.location.href = "anecdotario.html")
     .catch(error => console.error("Error:", error));
 
+    
 
 
 });
