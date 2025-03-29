@@ -51,7 +51,6 @@ async function getPlaylistTracks() {
 async function searchSongs() {
     const query = document.getElementById('searchInput').value;
     if (!query) return;
-
     const response = await fetch(`https://api.spotify.com/v1/search?q=${encodeURIComponent(query)}&type=track`, {
         headers: {
             'Authorization': `Bearer ${token}`
