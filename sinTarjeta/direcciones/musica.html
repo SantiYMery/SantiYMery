@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musica</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Adelia&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+    <div class="cabeceraPaginas">
+        <a href="../index.html" class="back-arrow">
+            &lt;
+        </a>
+        <h5 class="texto-encabezado2"> Fiesta </h5>
+    </div>
+    
+    <div class="container d-flex">
+        <div class=" p-3 text-center justify-content-center" style="width: 35rem; border-radius: 20px; text-align: center;">
+            
+            <h1>¡Playlist para la fiesta!</h1>
+            <iframe style="border-radius:12px; margin-top: 25px;" src="https://open.spotify.com/embed/playlist/0kH8RhiA1kNdQAGApmduQt?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" id="miMusica"></iframe>
+            <button onclick="start()" class="btn" >Quiero Agregar canciones</button>
+        
+            <div id="agregarMusica" class="agregarMusica">
+                <h1>agregarMusicazone</h1>
+                <h2>Buscar canciones</h2>
+                <input type="text" id="searchInput" placeholder="Buscar canción..." />
+                <ul id="songList" class="song-list"></ul>
+
+                <h2>Playlist</h2>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!-- Script para conectar con Spotify -->
+    <script src="spotify.js"></script>
+</body>
+</html>

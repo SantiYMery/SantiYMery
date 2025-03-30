@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Time</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Adelia&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css" />
+
+  <style>
+    body {
+      background-image: url('../images/fondoNuevo.png'); /* Cambia por la URL o ruta de tu imagen */
+      background-repeat: repeat; /* La imagen se repetirá en ambas direcciones */
+      background-size: auto; /* Tamaño original de la imagen */
+    }
+    
+  </style>
+
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="contenido">
+        <div class="cabeceraPaginas">
+            <a href="../index.html" class="back-arrow">
+                &lt;
+            </a>
+            <h5 class="texto-encabezado2"> Game time!   </h5>
+        </div>
+
+    
+        <div class="container d-flex" style="height: 100vh">
+            <div class="p-3 text-center justify-content-center" style="width: 35rem; border-radius: 20px;">
+              <div class="renglon" id="espacioDeParticipante">
+                <h4 >Participante</h4>
+                <input type="text" id="participante" placeholder="nombre participante" />
+              </div>
+              
+              <div id="contenedor"></div>
+              <button id="siguiente">Siguiente</button>
+              <button id="terminar" style="display:none;">Terminar</button>
+              
+
+              <button class="btnRegalo" style="width: 80%;" id="anecdotario" onclick="window.location.href='anecdotario.html'">Anecdotario</button>
+            </div>
+            
+        </div>
+    </div>
+  <script src="encuesta.js"></script>
+</body>
+</html>
