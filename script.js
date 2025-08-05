@@ -81,7 +81,7 @@ function copiarAlias() {
 }
 
 function copiarAliasRegalo() {
-    navigator.clipboard.writeText("santiagourrets.uala").then(() => {
+    navigator.clipboard.writeText("regalo.santiymery").then(() => {
         alert('Alias para el regalo copiado al portapapeles');
     }).catch(err => {
         alert('Error al copiar: ' + err);
